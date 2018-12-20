@@ -1,0 +1,13 @@
+step 1 update version in build.gradle file
+Step 2 Release from android studio
+step 3 copy file to released apps folder and rename
+step 4 copy file to updated version folder
+step 5 upload file to firebase storage For Downloading
+step 6 upload file to firebase storage UpdatedVersion
+step 7 update firebase database last version code released value
+step 8 update firebase database version code detail with "updated" value
+step 9 send a notification to users to update their apps
+step 10 update .tk from freenom
+step 11 push source code to git
+		OR
+step 12 copy original source files to released folder
