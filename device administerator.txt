@@ -1,0 +1,34 @@
+public class DeviceAdmin extends DeviceAdminReceiver {
+
+    @Override
+    public void onEnabled(Context context, Intent intent) {
+        Log.i(this, "admin_receiver_status_enabled");
+        // admin rights
+        App.getPreferences().edit().putBoolean(App.ADMIN_ENABLED, true).commit(); //App.getPreferences() returns the sharedPreferences
+
+    }
+
+    @Override
+    public CharSequence onDisableRequested(Context context, Intent intent) {
+        return "admin_receiver_status_disable_warning";
+    }
+
+    @Override
+    public void onDisabled(Context context, Intent intent) {
+        Log.info(this, "admin_receiver_status_disabled");
+        // admin rights removed
+        App.getPreferences().edit().putBoolean(App.ADMIN_ENABLED, false).commit(); //App.getPreferences() returns the sharedPreferences
+    }
+}
+
+
+anywhere in your app:
+
+
+
+DevicePolicyManager mDPM = (DevicePolicyManager)getSystemService(Context.DEVICE_POLICY_SERVICE);
+ComponentName mAdminName = new ComponentName(this, DeviceAdmin.class); 
+
+if(mDPM != null &&mDPM.isAdminActive(mAdminName)) {
+    // admin active
+}

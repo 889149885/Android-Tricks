@@ -1,0 +1,43 @@
+
+// Copy
+
+
+// check sdk
+
+
+int sdk = android.os.Build.VERSION.SDK_INT;
+if(sdk < android.os.Build.VERSION_CODES.HONEYCOMB) {
+    android.text.ClipboardManager clipboard = (android.text.ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+    clipboard.setText("text to clip");
+} else {
+    android.content.ClipboardManager clipboard = (android.content.ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE); 
+    android.content.ClipData clip = android.content.ClipData.newPlainText("text label","text to clip");
+    clipboard.setPrimaryClip(clip);
+}
+
+//"text to clip" here to pass your text
+
+
+
+
+
+
+//Paste
+
+int sdk = android.os.Build.VERSION.SDK_INT;
+    if (sdk < android.os.Build.VERSION_CODES.HONEYCOMB) {
+        android.text.ClipboardManager clipboard = (android.text.ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+        if (clipboard.getText() != null) {
+            txtNotes.getText().insert(txtNotes.getSelectionStart(), clipboard.getText());
+        }
+    } else {
+        android.content.ClipboardManager clipboard = (android.content.ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+        android.content.ClipData.Item item = clipboard.getPrimaryClip().getItemAt(0);
+        if (item.getText() != null) {
+            txtNotes.getText().insert(txtNotes.getSelectionStart(), item.getText());
+        }
+    }
+
+
+
+//value is in item

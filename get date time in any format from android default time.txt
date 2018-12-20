@@ -1,0 +1,10 @@
+	
+	Calendar calendar = Calendar.getInstance();
+
+  	Date completeDateTime = calendar.getTime();
+
+   	SimpleDateFormat format = new SimpleDateFormat("MMM,yyyy");
+
+     	String date = format.format(completeDateTime);
+
+	Toast.makeText(this, "month year abhi yh hy \n"+String.valueOf(date), Toast.LENGTH_LONG).show();

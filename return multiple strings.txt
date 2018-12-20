@@ -1,0 +1,6 @@
+public String[] getExample() {
+        String ar[] = new String[2];
+        ar[0]= "hello";
+        ar[1] =  "hi";
+        return ar; //returning two values at once
+    }

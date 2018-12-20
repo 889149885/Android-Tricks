@@ -1,0 +1,33 @@
+Working
+new CountDownTimer(3000, 1000) {
+	int value = 0;
+	public void onTick(long millisUntilFinished) {
+	//trigger after 1 sec
+	}
+
+	public void onFinish() {
+	//do work here
+	}
+}.start();
+
+Below are Not Working
+
+//1st method
+
+	new Timer().schedule(new TimerTask() {
+                            @Override
+                            public void run() {
+                                //run after 2 seconds
+                                
+                            }
+                        },2000);
+						
+// 2nd Method
+Timer timer = new Timer();
+TimerTask timerTask = new TimerTask() {
+	@Override
+	public void run() {
+		//write code here it will run after 2 seconds
+	}
+};
+timer.schedule(timerTask,2000);						

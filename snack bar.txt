@@ -1,0 +1,18 @@
+Snackbar.make(getWindow().getDecorView().getRootView(), "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Toast.makeText(MainActivity.this, "Dada yh to kaam kr rha hai", Toast.LENGTH_SHORT).show();
+                            }
+                        }).show();
+
+Replace it
+
+getWindow().getDecorView().getRootView()
+
+With Your Own view
+
+or
+
+you can also get by this way
+getWindow().getDecorView().findViewById(android.R.id.content)

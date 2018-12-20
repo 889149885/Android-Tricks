@@ -1,0 +1,9 @@
+
+
+public String[] split(String regex)
+
+
+String filename = "abc.def.ghi";       		// full file name
+String[] parts = filename.split("\\."); 	// String array, each element is text between dots
+
+String beforeFirstDot = parts[0];   	        // Text before the first dot

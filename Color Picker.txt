@@ -1,0 +1,19 @@
+Library
+implementation 'com.github.yukuku:ambilwarna:2.0.1'
+
+
+
+
+AmbilWarnaDialog dialog = new AmbilWarnaDialog(this, 0, new AmbilWarnaDialog.OnAmbilWarnaListener() {
+            @Override
+            public void onCancel(AmbilWarnaDialog dialog) {
+
+            }
+
+            @Override
+            public void onOk(AmbilWarnaDialog dialog, int color) {
+                String hexColor = String.format("#%06X", (0xFFFFFF & color));
+                Toast.makeText(SettingsActivity.this, hexColor, Toast.LENGTH_SHORT).show();
+            }
+        });
+        dialog.show();

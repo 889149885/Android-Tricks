@@ -1,0 +1,8 @@
+ 
+//it will open the conversation or make new
+
+
+ Uri smsUri = Uri.parse("smsto:"+"+923228940815;+923443416914");
+ Intent intent = new Intent(Intent.ACTION_SENDTO,smsUri);
+ intent.putExtra("sms_body","Hello Ranag 4 U");
+ startActivity(intent);

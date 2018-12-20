@@ -1,0 +1,25 @@
+	public void yourworking()
+    {
+	//taking answer true or false
+        if (checkEdittext()==true)
+        {
+            Toast.makeText(this, "Value true hy", Toast.LENGTH_SHORT).show();
+        }else
+            {
+                Toast.makeText(this, "value false hy", Toast.LENGTH_SHORT).show();
+            }
+    }
+
+	
+	//checking Edittext to have a value
+	
+    public boolean checkEdittext()
+    {
+        if (Edittext.getText().toString().equals(""))
+        {
+            return false;
+        }else
+            {
+                return true;
+            }
+    }

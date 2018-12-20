@@ -1,0 +1,23 @@
+// make on editor change listner
+
+//in xml
+//pass attribute
+
+//imeOption"actionDone"
+//or whatever action do you want
+
+
+
+edittext.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
+
+                if (i== EditorInfo.IME_ACTION_DONE)
+                {
+                    showData(textView);
+
+                    return true;
+                }
+                return false;
+            }
+        });

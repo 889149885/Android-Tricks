@@ -1,0 +1,7 @@
+Intent intent = new Intent(Intent.ACTION_VIEW);
+intent.setDataAndType(Uri.fromFile(apkPath), "application/vnd.android.package-archive");
+intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+startActivity(intent);
+
+//apkPath should like that
+apkPath == "/download/app.apk";

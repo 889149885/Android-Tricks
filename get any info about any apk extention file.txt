@@ -1,0 +1,5 @@
+final PackageManager pm = getPackageManager();
+String apkName = "example.apk";
+String fullPath = Environment.getExternalStorageDirectory() + "/" + apkName;        
+PackageInfo info = pm.getPackageArchiveInfo(fullPath, 0);
+Toast.makeText(this, "VersionCode : " + info.versionCode + ", VersionName : " + info.versionName , Toast.LENGTH_LONG).show();

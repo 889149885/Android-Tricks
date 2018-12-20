@@ -1,0 +1,22 @@
+AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setView(R.layout.dialog_edit_delete_id);
+                builder.setTitle("RanaG 4 U");
+                builder.setPositiveButton("Update", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Toast.makeText(ViewCategoryActivity.this, "Update clicked", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                builder.setNegativeButton("Delete", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Toast.makeText(ViewCategoryActivity.this, "delete clicked", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                builder.setNeutralButton("Back", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Toast.makeText(ViewCategoryActivity.this, "nuetral back clicked", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                builder.show();

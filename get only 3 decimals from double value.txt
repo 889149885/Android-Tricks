@@ -1,0 +1,1 @@
+String valueWith3Decimals = String.format("%.3f", myDoubleValue);

@@ -1,0 +1,10 @@
+public static class pairReturn{
+       
+        public int value1;
+        public double value2;
+        public pairReturn(int param){
+            //place the code of your function, e.g.:
+            value1 =param*5;
+            value2 =param*10;
+        }
+    }

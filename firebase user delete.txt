@@ -1,0 +1,20 @@
+Is there a way I can get a specific user account from firebase and then delete it?
+
+For instance:
+
+// I need a means of getting a specific auth user.
+var user = firebase.auth().getUser(uid);
+// Note the getUser function is not an actual function.
+After, I want to delete that user and their additional data:
+
+// This works
+user.delete().then(function() {
+   // User deleted.
+   var ref = firebase.database().ref(
+      "users/".concat(user.uid, "/")
+   );
+   ref.remove();
+});
+Firebase Documentation states that users can be deleted if they are currently logged in:
+
+firebase.auth().currentUser.delete()

@@ -1,0 +1,4 @@
+//This is used to convert argb color to int color
+					a    r    g    b
+int mTry = android.graphics.Color.argb(255, 255, 255, 255);
+Toast.makeText(this, String.valueOf(mTry), Toast.LENGTH_LONG).show();

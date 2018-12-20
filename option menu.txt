@@ -1,0 +1,39 @@
+
+
+@Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.option_menu_main_activity,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId())
+        {
+            case R.id.option_changeMainPass:
+                //do work
+
+                break;
+
+            case R.id.option_EditYourName:
+                //do work
+
+                break;
+
+            case R.id.option_backupAndRestore:
+                //do work
+
+                break;
+
+            case R.id.option_about:
+                //do work
+
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
