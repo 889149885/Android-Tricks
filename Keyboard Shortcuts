@@ -1,0 +1,20 @@
+Ctrl + Shift + -    collapse all code in editor
+Ctrl + Shift + +    Expand all code in editor
+
+
+Ctrl + Shift + F7   Highlight usage of current Word
+F3		    Go To Next
+Shift + F3 	    Go To Previous
+ESC 		    Remove Highlight
+
+Ctrl+Shift+Backspace  Last Edit History
+
+Ctrl+Shift+J   to join declaration and assignment
+
+Alt+arrow Up/Down   =Cursor go through the Methods
+
+Ctrl+B   Go to decleration
+
+Ctrl+W   Select Words Slightly
+
+Ctrl+F4  Close opened Tab
